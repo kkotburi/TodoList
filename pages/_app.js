@@ -4,6 +4,9 @@ import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+
+  console.log("pageProps", pageProps);
+
   return (
     <>
       <h1>Header</h1>

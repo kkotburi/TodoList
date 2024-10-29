@@ -16,12 +16,12 @@ const Post = ({ post }) => {
 
 export default Post;
 
-export async function getServerSideProrps(context) {
+export async function getServerSideProps(context) {
   const { params } = context;
   const { id } = params;
 
   const response = await fetch(
-    `https://jsonplaceholder.typicode.com/todos/${id}`
+    `https://jsonplaceholder.typicode.com/posts/${id}`
   );
   const post = await response.json();
   console.log("Hello!");
