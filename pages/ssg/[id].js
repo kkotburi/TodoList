@@ -3,6 +3,7 @@ import React from "react";
 
 const Post = ({ post }) => {
   const router = useRouter();
+
   if (router.isFallback) return <div>Loading…</div>;
 
   return (
@@ -19,7 +20,7 @@ export default Post;
 export async function getStaticPaths() {
   return {
     paths: [{ params: { id: "1" } }, { params: { id: "2" } }],
-    fallback: "blocking",
+    fallback: true,
   };
 }
 
