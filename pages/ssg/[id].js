@@ -21,6 +21,8 @@ export async function getStaticPaths() {
   return {
     paths: [{ params: { id: "1" } }, { params: { id: "2" } }],
     fallback: true,
+    // fallback: false,
+    // fallback: "blocking",
   };
 }
 
@@ -32,6 +34,6 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { post },
-    // revalidate: 5,
+    revalidate: 10,
   };
 }
