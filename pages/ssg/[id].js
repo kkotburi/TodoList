@@ -29,12 +29,15 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${params.id}`
-    // `https://localhost:4000/posts/${params.id}`
+    // `https://.../posts/${params.id}`
   );
   const post = await response.json();
 
   return {
     props: { post },
-    revalidate: 10,
+    // Next.js will attempt to re-generate the page:
+    // When a request comes in
+    // At most once every 10 seconds
+    revalidate: 10, // In seconds  };
   };
 }
