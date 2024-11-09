@@ -28,8 +28,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const response = await fetch(
-    // `https://jsonplaceholder.typicode.com/posts/${params.id}`
-    `https://localhost:3001/posts/${params.id}`
+    `https://jsonplaceholder.typicode.com/posts/${params.id}`
+    // `https://localhost:3001/posts/${params.id}`
   );
   const post = await response.json();
 

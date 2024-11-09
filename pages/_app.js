@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <Provider />
+      {/* <Provider /> */}
       <h1>Header</h1>
       <div onClick={() => router.push("/")}>Home</div>
       <Link href="/about">About</Link>
