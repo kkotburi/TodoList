@@ -8,7 +8,8 @@ const todo = () => {
   React.useEffect(() => {
     const { id } = router.query;
     if (id) {
-      fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+      // fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+      fetch(`/api/todos/${id}`)
         .then((response) => response.json())
         .then((json) => setTitle(json.title));
     }

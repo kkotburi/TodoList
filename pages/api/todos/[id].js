@@ -8,5 +8,5 @@ export default async function handler(req, res) {
 
   const todo = await response.json();
 
-  res.status(200).json({ data: todo });
+  res.status(200).json(todo);
 }
