@@ -24,6 +24,8 @@ export async function getServerSideProps(context) {
   );
   const post = await response.json();
 
+  // console.log("안녕하세요?");
+
   return {
     props: {
       post,
